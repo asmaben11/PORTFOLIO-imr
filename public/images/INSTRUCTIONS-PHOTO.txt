@@ -1,0 +1,52 @@
+========================================
+   INSTRUCTIONS POUR AJOUTER VOTRE PHOTO
+   Portfolio de Bediaf Imene
+========================================
+
+ÉTAPE 1 : PRÉPARER VOTRE PHOTO
+- Sauvegardez votre photo sur votre ordinateur
+- Formats acceptés : JPG, PNG, WebP
+- Taille recommandée : minimum 300x300 pixels
+- Format optimal : carré (1:1) pour un meilleur rendu
+
+ÉTAPE 2 : COPIER LA PHOTO
+- Copiez votre photo dans ce dossier :
+  c:\Users\CORTEC\porttfolio\my-react-app\public\images\
+
+ÉTAPE 3 : RENOMMER LA PHOTO
+- Renommez votre photo en exactement :
+  profile-photo.jpg
+  OU
+  profile-photo.png
+
+ÉTAPE 4 : MODIFIER LE CODE (si nécessaire)
+- Ouvrez le fichier : src\App.js
+- Trouvez la ligne 83 qui contient :
+  src="/images/profile-photo.svg"
+- Changez-la en :
+  src="/images/profile-photo.jpg"
+  (ou .png selon votre format)
+
+ÉTAPE 5 : REDÉMARRER L'APPLICATION
+- Dans le terminal, appuyez sur Ctrl+C pour arrêter
+- Puis tapez : npm start
+- Ouvrez http://localhost:3000
+
+========================================
+RÉSULTAT ATTENDU :
+Votre photo apparaîtra dans la section d'accueil
+du portfolio, dans un cercle avec un effet de survol.
+========================================
+
+PROBLÈMES COURANTS :
+- Photo ne s'affiche pas : vérifiez le nom exact du fichier
+- Erreur de chargement : vérifiez le format (JPG/PNG)
+- Image déformée : utilisez une photo carrée
+- Taille trop grande : réduisez la taille de l'image
+
+SUPPORT :
+Si vous avez des problèmes, vérifiez que :
+1. Le fichier est bien dans le bon dossier
+2. Le nom est exactement "profile-photo.jpg"
+3. L'application React est redémarrée
+4. Le format est JPG ou PNG

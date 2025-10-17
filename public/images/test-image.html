@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .test-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #667eea;
+            display: block;
+            margin: 20px auto;
+        }
+        .status {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Test de l'image de profil</h1>
+        
+        <div class="status success">
+            ✅ L'image SVG a été créée avec succès !
+        </div>
+        
+        <img src="/images/profile-photo.svg" alt="Bediaf Imene" class="profile-photo" 
+             onload="document.getElementById('status').innerHTML='✅ Image chargée avec succès !'; document.getElementById('status').className='status success';"
+             onerror="document.getElementById('status').innerHTML='❌ Erreur de chargement de l\'image'; document.getElementById('status').className='status error';">
+        
+        <div id="status" class="status">
+            Chargement en cours...
+        </div>
+        
+        <h3>Instructions pour ajouter votre vraie photo :</h3>
+        <ol>
+            <li>Placez votre photo dans le dossier <code>public/images/</code></li>
+            <li>Renommez-la en <code>profile-photo.jpg</code> ou <code>profile-photo.png</code></li>
+            <li>Modifiez le fichier <code>src/App.js</code> ligne 83 pour changer l'extension</li>
+            <li>Redémarrez l'application React</li>
+        </ol>
+        
+        <p><strong>Note :</strong> Cette image SVG est temporaire. Remplacez-la par votre vraie photo de profil.</p>
+    </div>
+</body>
+</html>
